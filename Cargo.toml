@@ -1,0 +1,33 @@
+[package]
+name = "sendhub"
+version = "0.1.0"
+authors = ["Dongri Jin <dongrify@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "1.0"
+env_logger = "0.6.2"
+
+serde = "1.0.99"
+serde_json = "1.0.40"
+
+reqwest = "=0.9.17"
+chrono = "0.4.5"
+
+sendgrid = "0.8.1"
+mailgun-rs = "0.1.2"
+
+rusoto_core = "0.40.0"
+rusoto_credential = "0.40.0"
+rusoto_ses = "0.40.0"
+
+tera = "0.11"
+
+slack-hook = "0.8.0"
+
+envy = "0.4.0"
+lazy_static = "1.4.0"
+
+mimers = "0.1.1"

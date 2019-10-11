@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  sendhub:
+    container_name: sendhub
+    build:
+      context: .
+      dockerfile: devDockerfile
+    environment:
+      - RUST_ENV=docker
+      - AWS_SES_KEY=${AWS_SES_KEY}
+      - AWS_SES_SECRET=${AWS_SES_SECRET}
+      - MAILGUN_DOMAIN=${MAILGUN_DOMAIN}
+      - MAILGUN_KEY=${MAILGUN_KEY}
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+    volumes:
+      - .:/source
+    logging:
+      options:
+        max-size: "500k"
+    ports:
+      - "127.0.0.1:3000:3000"
