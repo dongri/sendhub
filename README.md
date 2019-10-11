@@ -1,4 +1,5 @@
 # Sendhub
+sendhub provides api to send emails and slack webhook.
 
 ![sendhub](https://github.com/dongri/images/blob/master/sendhub.png?raw=true "sendhub")
 
